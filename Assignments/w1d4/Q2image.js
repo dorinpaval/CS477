@@ -13,5 +13,4 @@ const server1 = http.createServer();
 server1.on('request', (req, res) => {
     fs.createReadStream("./dolphin2.jpg").pipe(res);
 });
-
 server1.listen(4000);
