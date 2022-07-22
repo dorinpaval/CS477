@@ -4,7 +4,6 @@ const fs = require('fs');
 const server = http.createServer();
 
 server.on('request', function (req, res) {
-    res.writeHead(200, { 'Content-Type': 'image/jpg' });
     let img = fs.readFileSync('./dolphin.jpg');
     res.end(img);
 });
