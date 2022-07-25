@@ -31,9 +31,6 @@ server.on('request', (req, res) => {
             console.log(parsedBody.split('=')[1].split('+').join(' '));
             fs.writeFileSync('message.txt', parsedBody.split('=')[1].split('+').join(' '));
         });
-
-        res.statusCode = 302;
-        res.setHeader("Location", "/");
         return res.end();
     }
 
